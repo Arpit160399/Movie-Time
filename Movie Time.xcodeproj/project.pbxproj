@@ -10,11 +10,30 @@
 		83F8C93729842E02006EBD7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C93629842E02006EBD7C /* AppDelegate.swift */; };
 		83F8C93929842E02006EBD7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C93829842E02006EBD7C /* SceneDelegate.swift */; };
 		83F8C94029842E05006EBD7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F8C93F29842E05006EBD7C /* Assets.xcassets */; };
-		83F8C94E29842E05006EBD7C /* Movie_TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C94D29842E05006EBD7C /* Movie_TimeTests.swift */; };
+		83F8C94E29842E05006EBD7C /* UserSessionManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C94D29842E05006EBD7C /* UserSessionManagerTests.swift */; };
 		83F8C95829842E05006EBD7C /* Movie_TimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C95729842E05006EBD7C /* Movie_TimeUITests.swift */; };
 		83F8C95A29842E05006EBD7C /* Movie_TimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C95929842E05006EBD7C /* Movie_TimeUITestsLaunchTests.swift */; };
 		83F8C96729842EEA006EBD7C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C96629842EEA006EBD7C /* MainViewController.swift */; };
 		83F8C96B29843624006EBD7C /* MainAppDepedencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C96A29843624006EBD7C /* MainAppDepedencyContainer.swift */; };
+		83F8C96E298488F2006EBD7C /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C96D298488F2006EBD7C /* SessionManager.swift */; };
+		83F8C970298489D5006EBD7C /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C96F298489D5006EBD7C /* UserAuth.swift */; };
+		83F8C97229849903006EBD7C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C97129849903006EBD7C /* Session.swift */; };
+		83F8C9752984C1EB006EBD7C /* UserDataEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C9742984C1EB006EBD7C /* UserDataEncoding.swift */; };
+		83F8C9772984C300006EBD7C /* UserDataCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C9762984C300006EBD7C /* UserDataCoder.swift */; };
+		83F8C97C298554A6006EBD7C /* KeyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C97B298554A6006EBD7C /* KeyStore.swift */; };
+		83F8C97E298554C4006EBD7C /* KeyQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C97D298554C4006EBD7C /* KeyQuery.swift */; };
+		83F8C980298554D8006EBD7C /* KeyItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C97F298554D8006EBD7C /* KeyItems.swift */; };
+		83F8C98229856983006EBD7C /* KeyItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C98129856983006EBD7C /* KeyItemData.swift */; };
+		83F8C98429856A19006EBD7C /* KeyStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C98329856A19006EBD7C /* KeyStoreTest.swift */; };
+		83F8C988298575A9006EBD7C /* UserSessionMockDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C987298575A9006EBD7C /* UserSessionMockDataStack.swift */; };
+		83F8C98A2985A9DB006EBD7C /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C9892985A9DB006EBD7C /* SessionStore.swift */; };
+		83F8C98E2985AB1A006EBD7C /* UserDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C98D2985AB1A006EBD7C /* UserDataLayer.swift */; };
+		83F8C9922985B199006EBD7C /* FileUserSessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C9912985B199006EBD7C /* FileUserSessionStore.swift */; };
+		83F8C99529860537006EBD7C /* StringResource .swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C99429860537006EBD7C /* StringResource .swift */; };
+		83F8C99729861496006EBD7C /* UserDataLayerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C99629861496006EBD7C /* UserDataLayerTest.swift */; };
+		83F8C99929861E26006EBD7C /* testAuth.json in Resources */ = {isa = PBXBuildFile; fileRef = 83F8C99829861E26006EBD7C /* testAuth.json */; };
+		83F8C9A029867E07006EBD7C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C99F29867E07006EBD7C /* User.swift */; };
+		83F8C9A229867E31006EBD7C /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C9A129867E31006EBD7C /* Register.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,12 +60,31 @@
 		83F8C93F29842E05006EBD7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83F8C94429842E05006EBD7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83F8C94929842E05006EBD7C /* Movie TimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Movie TimeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		83F8C94D29842E05006EBD7C /* Movie_TimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie_TimeTests.swift; sourceTree = "<group>"; };
+		83F8C94D29842E05006EBD7C /* UserSessionManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionManagerTests.swift; sourceTree = "<group>"; };
 		83F8C95329842E05006EBD7C /* Movie TimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Movie TimeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F8C95729842E05006EBD7C /* Movie_TimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie_TimeUITests.swift; sourceTree = "<group>"; };
 		83F8C95929842E05006EBD7C /* Movie_TimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie_TimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		83F8C96629842EEA006EBD7C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		83F8C96A29843624006EBD7C /* MainAppDepedencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppDepedencyContainer.swift; sourceTree = "<group>"; };
+		83F8C96D298488F2006EBD7C /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		83F8C96F298489D5006EBD7C /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
+		83F8C97129849903006EBD7C /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		83F8C9742984C1EB006EBD7C /* UserDataEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataEncoding.swift; sourceTree = "<group>"; };
+		83F8C9762984C300006EBD7C /* UserDataCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataCoder.swift; sourceTree = "<group>"; };
+		83F8C97B298554A6006EBD7C /* KeyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStore.swift; sourceTree = "<group>"; };
+		83F8C97D298554C4006EBD7C /* KeyQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyQuery.swift; sourceTree = "<group>"; };
+		83F8C97F298554D8006EBD7C /* KeyItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyItems.swift; sourceTree = "<group>"; };
+		83F8C98129856983006EBD7C /* KeyItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyItemData.swift; sourceTree = "<group>"; };
+		83F8C98329856A19006EBD7C /* KeyStoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStoreTest.swift; sourceTree = "<group>"; };
+		83F8C987298575A9006EBD7C /* UserSessionMockDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionMockDataStack.swift; sourceTree = "<group>"; };
+		83F8C9892985A9DB006EBD7C /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		83F8C98D2985AB1A006EBD7C /* UserDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataLayer.swift; sourceTree = "<group>"; };
+		83F8C9912985B199006EBD7C /* FileUserSessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUserSessionStore.swift; sourceTree = "<group>"; };
+		83F8C99429860537006EBD7C /* StringResource .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringResource .swift"; sourceTree = "<group>"; };
+		83F8C99629861496006EBD7C /* UserDataLayerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataLayerTest.swift; sourceTree = "<group>"; };
+		83F8C99829861E26006EBD7C /* testAuth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testAuth.json; sourceTree = "<group>"; };
+		83F8C99F29867E07006EBD7C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		83F8C9A129867E31006EBD7C /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +135,8 @@
 		83F8C93529842E02006EBD7C /* Movie Time */ = {
 			isa = PBXGroup;
 			children = (
+				83F8C99C29867D54006EBD7C /* Modals */,
+				83F8C96C298488A9006EBD7C /* UserSessionManager */,
 				83F8C96A29843624006EBD7C /* MainAppDepedencyContainer.swift */,
 				83F8C96629842EEA006EBD7C /* MainViewController.swift */,
 				83F8C93629842E02006EBD7C /* AppDelegate.swift */,
@@ -110,7 +150,7 @@
 		83F8C94C29842E05006EBD7C /* Movie TimeTests */ = {
 			isa = PBXGroup;
 			children = (
-				83F8C94D29842E05006EBD7C /* Movie_TimeTests.swift */,
+				83F8C99B29862229006EBD7C /* UserSessionTest */,
 			);
 			path = "Movie TimeTests";
 			sourceTree = "<group>";
@@ -122,6 +162,112 @@
 				83F8C95929842E05006EBD7C /* Movie_TimeUITestsLaunchTests.swift */,
 			);
 			path = "Movie TimeUITests";
+			sourceTree = "<group>";
+		};
+		83F8C96C298488A9006EBD7C /* UserSessionManager */ = {
+			isa = PBXGroup;
+			children = (
+				83F8C9732984B855006EBD7C /* Implementation */,
+				83F8C96D298488F2006EBD7C /* SessionManager.swift */,
+			);
+			path = UserSessionManager;
+			sourceTree = "<group>";
+		};
+		83F8C9732984B855006EBD7C /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				83F8C98B2985A9F9006EBD7C /* KeyStore */,
+				83F8C98F2985AB44006EBD7C /* Encoding */,
+				83F8C98C2985AB1A006EBD7C /* UserDataLayer */,
+				83F8C9892985A9DB006EBD7C /* SessionStore.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		83F8C98B2985A9F9006EBD7C /* KeyStore */ = {
+			isa = PBXGroup;
+			children = (
+				83F8C98129856983006EBD7C /* KeyItemData.swift */,
+				83F8C97F298554D8006EBD7C /* KeyItems.swift */,
+				83F8C97D298554C4006EBD7C /* KeyQuery.swift */,
+				83F8C97B298554A6006EBD7C /* KeyStore.swift */,
+			);
+			path = KeyStore;
+			sourceTree = "<group>";
+		};
+		83F8C98C2985AB1A006EBD7C /* UserDataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				83F8C9932985B1A1006EBD7C /* Implementation */,
+				83F8C98D2985AB1A006EBD7C /* UserDataLayer.swift */,
+			);
+			name = UserDataLayer;
+			path = "Movie Time/UserSessionManager/UserDataLayer";
+			sourceTree = SOURCE_ROOT;
+		};
+		83F8C98F2985AB44006EBD7C /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				83F8C9902985AB60006EBD7C /* Implementation */,
+				83F8C9742984C1EB006EBD7C /* UserDataEncoding.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		83F8C9902985AB60006EBD7C /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				83F8C9762984C300006EBD7C /* UserDataCoder.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		83F8C9932985B1A1006EBD7C /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				83F8C9912985B199006EBD7C /* FileUserSessionStore.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		83F8C99B29862229006EBD7C /* UserSessionTest */ = {
+			isa = PBXGroup;
+			children = (
+				83F8C987298575A9006EBD7C /* UserSessionMockDataStack.swift */,
+				83F8C98329856A19006EBD7C /* KeyStoreTest.swift */,
+				83F8C99829861E26006EBD7C /* testAuth.json */,
+				83F8C99629861496006EBD7C /* UserDataLayerTest.swift */,
+				83F8C94D29842E05006EBD7C /* UserSessionManagerTests.swift */,
+			);
+			path = UserSessionTest;
+			sourceTree = "<group>";
+		};
+		83F8C99C29867D54006EBD7C /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				83F8C99E29867DE3006EBD7C /* User */,
+				83F8C99D29867DC8006EBD7C /* Resource */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		83F8C99D29867DC8006EBD7C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				83F8C99429860537006EBD7C /* StringResource .swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		83F8C99E29867DE3006EBD7C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				83F8C97129849903006EBD7C /* Session.swift */,
+				83F8C96F298489D5006EBD7C /* UserAuth.swift */,
+				83F8C99F29867E07006EBD7C /* User.swift */,
+				83F8C9A129867E31006EBD7C /* Register.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83F8C99929861E26006EBD7C /* testAuth.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,10 +400,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83F8C970298489D5006EBD7C /* UserAuth.swift in Sources */,
+				83F8C9A229867E31006EBD7C /* Register.swift in Sources */,
+				83F8C9752984C1EB006EBD7C /* UserDataEncoding.swift in Sources */,
+				83F8C98229856983006EBD7C /* KeyItemData.swift in Sources */,
+				83F8C99529860537006EBD7C /* StringResource .swift in Sources */,
 				83F8C96B29843624006EBD7C /* MainAppDepedencyContainer.swift in Sources */,
 				83F8C96729842EEA006EBD7C /* MainViewController.swift in Sources */,
+				83F8C9922985B199006EBD7C /* FileUserSessionStore.swift in Sources */,
+				83F8C97C298554A6006EBD7C /* KeyStore.swift in Sources */,
+				83F8C97229849903006EBD7C /* Session.swift in Sources */,
+				83F8C9772984C300006EBD7C /* UserDataCoder.swift in Sources */,
+				83F8C97E298554C4006EBD7C /* KeyQuery.swift in Sources */,
+				83F8C98E2985AB1A006EBD7C /* UserDataLayer.swift in Sources */,
 				83F8C93729842E02006EBD7C /* AppDelegate.swift in Sources */,
+				83F8C96E298488F2006EBD7C /* SessionManager.swift in Sources */,
+				83F8C9A029867E07006EBD7C /* User.swift in Sources */,
 				83F8C93929842E02006EBD7C /* SceneDelegate.swift in Sources */,
+				83F8C980298554D8006EBD7C /* KeyItems.swift in Sources */,
+				83F8C98A2985A9DB006EBD7C /* SessionStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +426,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83F8C94E29842E05006EBD7C /* Movie_TimeTests.swift in Sources */,
+				83F8C99729861496006EBD7C /* UserDataLayerTest.swift in Sources */,
+				83F8C94E29842E05006EBD7C /* UserSessionManagerTests.swift in Sources */,
+				83F8C988298575A9006EBD7C /* UserSessionMockDataStack.swift in Sources */,
+				83F8C98429856A19006EBD7C /* KeyStoreTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +508,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -397,7 +562,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -414,18 +579,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SLA2LH9F22;
+				DEVELOPMENT_TEAM = 2AA7VP743Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Movie Time/Info.plist";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = " To ensure user data secuirty and fast authetication ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.Movie-Time";
+				PRODUCT_BUNDLE_IDENTIFIER = com.time.movie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -440,18 +607,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SLA2LH9F22;
+				DEVELOPMENT_TEAM = 2AA7VP743Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Movie Time/Info.plist";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = " To ensure user data secuirty and fast authetication ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.Movie-Time";
+				PRODUCT_BUNDLE_IDENTIFIER = com.time.movie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -468,7 +637,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SLA2LH9F22;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.Movie-TimeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -488,7 +657,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SLA2LH9F22;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.Movie-TimeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
