@@ -98,7 +98,7 @@ class FileUserSessionStore: UserDataLayer {
 }
 
 
-fileprivate enum FileSessionStoreError: Error {
+fileprivate enum FileSessionStoreError: LocalError {
     
     case noUserFound
     case VerificationFailed

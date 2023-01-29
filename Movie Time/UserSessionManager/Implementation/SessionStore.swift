@@ -108,7 +108,7 @@ extension SessionStore {
 }
 
 /// Handling Error
-fileprivate enum SessionStoreError: Error {
+fileprivate enum SessionStoreError: LocalError {
     case encodingFailed
     
     var localizedDescription: String {

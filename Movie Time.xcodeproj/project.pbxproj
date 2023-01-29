@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8373ED582986F6EE00F6E4A3 /* ClientMockImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373ED572986F6EE00F6E4A3 /* ClientMockImplementation.swift */; };
+		83B4AC132986B20200A5A633 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B4AC122986B20200A5A633 /* NetworkLayer.swift */; };
+		83B4AC152986B57600A5A633 /* OMDBRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B4AC142986B57600A5A633 /* OMDBRequestBuilder.swift */; };
+		83B4AC182986C21300A5A633 /* OMDBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B4AC172986C21300A5A633 /* OMDBError.swift */; };
+		83B4AC1A2986C74A00A5A633 /* OMDBRemoteClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B4AC192986C74A00A5A633 /* OMDBRemoteClientAPI.swift */; };
+		83B4AC1C2986CC5800A5A633 /* OMDBResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B4AC1B2986CC5800A5A633 /* OMDBResponse.swift */; };
+		83B4AC212986CFA600A5A633 /* MovieListRemoteAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B4AC202986CFA600A5A633 /* MovieListRemoteAPITest.swift */; };
+		83DBAC022986DD6700534F55 /* LocalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DBAC012986DD6700534F55 /* LocalError.swift */; };
+		83DBAC042986EE1300534F55 /* FakeOMDBResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 83DBAC032986EE1300534F55 /* FakeOMDBResponse.json */; };
+		83DBAC062986EE1C00534F55 /* FakeOMDBErrro.json in Resources */ = {isa = PBXBuildFile; fileRef = 83DBAC052986EE1C00534F55 /* FakeOMDBErrro.json */; };
+		83DBAC082986F27800534F55 /* NetworkMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DBAC072986F27800534F55 /* NetworkMocker.swift */; };
 		83F8C93729842E02006EBD7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C93629842E02006EBD7C /* AppDelegate.swift */; };
 		83F8C93929842E02006EBD7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C93829842E02006EBD7C /* SceneDelegate.swift */; };
 		83F8C94029842E05006EBD7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F8C93F29842E05006EBD7C /* Assets.xcassets */; };
@@ -34,6 +45,8 @@
 		83F8C99929861E26006EBD7C /* testAuth.json in Resources */ = {isa = PBXBuildFile; fileRef = 83F8C99829861E26006EBD7C /* testAuth.json */; };
 		83F8C9A029867E07006EBD7C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C99F29867E07006EBD7C /* User.swift */; };
 		83F8C9A229867E31006EBD7C /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C9A129867E31006EBD7C /* Register.swift */; };
+		83F8C9A52986AA39006EBD7C /* MovieListRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C9A42986AA39006EBD7C /* MovieListRemoteAPI.swift */; };
+		83F8C9A92986ADF5006EBD7C /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C9A82986ADF5006EBD7C /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +67,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8373ED572986F6EE00F6E4A3 /* ClientMockImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMockImplementation.swift; sourceTree = "<group>"; };
+		8373ED592986FAA600F6E4A3 /* FakeOMDBErrro.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FakeOMDBErrro.json; sourceTree = "<group>"; };
+		8373ED5A2986FAA900F6E4A3 /* FakeOMDBResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FakeOMDBResponse.json; sourceTree = "<group>"; };
+		83B4AC122986B20200A5A633 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		83B4AC142986B57600A5A633 /* OMDBRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBRequestBuilder.swift; sourceTree = "<group>"; };
+		83B4AC172986C21300A5A633 /* OMDBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBError.swift; sourceTree = "<group>"; };
+		83B4AC192986C74A00A5A633 /* OMDBRemoteClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBRemoteClientAPI.swift; sourceTree = "<group>"; };
+		83B4AC1B2986CC5800A5A633 /* OMDBResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBResponse.swift; sourceTree = "<group>"; };
+		83B4AC202986CFA600A5A633 /* MovieListRemoteAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRemoteAPITest.swift; sourceTree = "<group>"; };
+		83DBAC012986DD6700534F55 /* LocalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalError.swift; sourceTree = "<group>"; };
+		83DBAC032986EE1300534F55 /* FakeOMDBResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = FakeOMDBResponse.json; path = ../../FakeOMDBResponse.json; sourceTree = "<group>"; };
+		83DBAC052986EE1C00534F55 /* FakeOMDBErrro.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = FakeOMDBErrro.json; path = ../../FakeOMDBErrro.json; sourceTree = "<group>"; };
+		83DBAC072986F27800534F55 /* NetworkMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMocker.swift; sourceTree = "<group>"; };
 		83F8C93329842E02006EBD7C /* Movie Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F8C93629842E02006EBD7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83F8C93829842E02006EBD7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +111,8 @@
 		83F8C99829861E26006EBD7C /* testAuth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testAuth.json; sourceTree = "<group>"; };
 		83F8C99F29867E07006EBD7C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		83F8C9A129867E31006EBD7C /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		83F8C9A42986AA39006EBD7C /* MovieListRemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRemoteAPI.swift; sourceTree = "<group>"; };
+		83F8C9A82986ADF5006EBD7C /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +140,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8373ED562986F6D500F6E4A3 /* Mocker */ = {
+			isa = PBXGroup;
+			children = (
+				8373ED592986FAA600F6E4A3 /* FakeOMDBErrro.json */,
+				8373ED5A2986FAA900F6E4A3 /* FakeOMDBResponse.json */,
+				83DBAC072986F27800534F55 /* NetworkMocker.swift */,
+				8373ED572986F6EE00F6E4A3 /* ClientMockImplementation.swift */,
+			);
+			path = Mocker;
+			sourceTree = "<group>";
+		};
+		83B4AC112986B1E000A5A633 /* Implemenation */ = {
+			isa = PBXGroup;
+			children = (
+				83B4AC122986B20200A5A633 /* NetworkLayer.swift */,
+				83B4AC142986B57600A5A633 /* OMDBRequestBuilder.swift */,
+			);
+			path = Implemenation;
+			sourceTree = "<group>";
+		};
+		83B4AC162986C1D900A5A633 /* OMDB */ = {
+			isa = PBXGroup;
+			children = (
+				83B4AC172986C21300A5A633 /* OMDBError.swift */,
+				83B4AC1B2986CC5800A5A633 /* OMDBResponse.swift */,
+			);
+			path = OMDB;
+			sourceTree = "<group>";
+		};
+		83B4AC1D2986CF3B00A5A633 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				8373ED562986F6D500F6E4A3 /* Mocker */,
+				83B4AC202986CFA600A5A633 /* MovieListRemoteAPITest.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		83F8C92A29842E02006EBD7C = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				83F8C99C29867D54006EBD7C /* Modals */,
+				83F8C9A32986A9C9006EBD7C /* Client */,
 				83F8C96C298488A9006EBD7C /* UserSessionManager */,
 				83F8C96A29843624006EBD7C /* MainAppDepedencyContainer.swift */,
 				83F8C96629842EEA006EBD7C /* MainViewController.swift */,
@@ -150,6 +217,9 @@
 		83F8C94C29842E05006EBD7C /* Movie TimeTests */ = {
 			isa = PBXGroup;
 			children = (
+				83DBAC032986EE1300534F55 /* FakeOMDBResponse.json */,
+				83DBAC052986EE1C00534F55 /* FakeOMDBErrro.json */,
+				83B4AC1D2986CF3B00A5A633 /* Client */,
 				83F8C99B29862229006EBD7C /* UserSessionTest */,
 			);
 			path = "Movie TimeTests";
@@ -245,6 +315,7 @@
 		83F8C99C29867D54006EBD7C /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				83F8C9AA2986AE9E006EBD7C /* ClientResponse */,
 				83F8C99E29867DE3006EBD7C /* User */,
 				83F8C99D29867DC8006EBD7C /* Resource */,
 			);
@@ -255,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				83F8C99429860537006EBD7C /* StringResource .swift */,
+				83DBAC012986DD6700534F55 /* LocalError.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -268,6 +340,41 @@
 				83F8C9A129867E31006EBD7C /* Register.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		83F8C9A32986A9C9006EBD7C /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				83F8C9A72986ADB5006EBD7C /* NetworkLayer */,
+				83F8C9A62986AB3E006EBD7C /* Implemenation */,
+				83F8C9A42986AA39006EBD7C /* MovieListRemoteAPI.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		83F8C9A62986AB3E006EBD7C /* Implemenation */ = {
+			isa = PBXGroup;
+			children = (
+				83B4AC192986C74A00A5A633 /* OMDBRemoteClientAPI.swift */,
+			);
+			path = Implemenation;
+			sourceTree = "<group>";
+		};
+		83F8C9A72986ADB5006EBD7C /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				83B4AC112986B1E000A5A633 /* Implemenation */,
+				83F8C9A82986ADF5006EBD7C /* Networking.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		83F8C9AA2986AE9E006EBD7C /* ClientResponse */ = {
+			isa = PBXGroup;
+			children = (
+				83B4AC162986C1D900A5A633 /* OMDB */,
+			);
+			path = ClientResponse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,7 +489,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83DBAC062986EE1C00534F55 /* FakeOMDBErrro.json in Resources */,
 				83F8C99929861E26006EBD7C /* testAuth.json in Resources */,
+				83DBAC042986EE1300534F55 /* FakeOMDBResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,25 +509,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B4AC1A2986C74A00A5A633 /* OMDBRemoteClientAPI.swift in Sources */,
+				83F8C9A92986ADF5006EBD7C /* Networking.swift in Sources */,
 				83F8C970298489D5006EBD7C /* UserAuth.swift in Sources */,
 				83F8C9A229867E31006EBD7C /* Register.swift in Sources */,
 				83F8C9752984C1EB006EBD7C /* UserDataEncoding.swift in Sources */,
+				83B4AC152986B57600A5A633 /* OMDBRequestBuilder.swift in Sources */,
 				83F8C98229856983006EBD7C /* KeyItemData.swift in Sources */,
 				83F8C99529860537006EBD7C /* StringResource .swift in Sources */,
+				83B4AC1C2986CC5800A5A633 /* OMDBResponse.swift in Sources */,
 				83F8C96B29843624006EBD7C /* MainAppDepedencyContainer.swift in Sources */,
 				83F8C96729842EEA006EBD7C /* MainViewController.swift in Sources */,
 				83F8C9922985B199006EBD7C /* FileUserSessionStore.swift in Sources */,
 				83F8C97C298554A6006EBD7C /* KeyStore.swift in Sources */,
 				83F8C97229849903006EBD7C /* Session.swift in Sources */,
 				83F8C9772984C300006EBD7C /* UserDataCoder.swift in Sources */,
+				83F8C9A52986AA39006EBD7C /* MovieListRemoteAPI.swift in Sources */,
 				83F8C97E298554C4006EBD7C /* KeyQuery.swift in Sources */,
+				83B4AC182986C21300A5A633 /* OMDBError.swift in Sources */,
 				83F8C98E2985AB1A006EBD7C /* UserDataLayer.swift in Sources */,
 				83F8C93729842E02006EBD7C /* AppDelegate.swift in Sources */,
+				83B4AC132986B20200A5A633 /* NetworkLayer.swift in Sources */,
 				83F8C96E298488F2006EBD7C /* SessionManager.swift in Sources */,
 				83F8C9A029867E07006EBD7C /* User.swift in Sources */,
 				83F8C93929842E02006EBD7C /* SceneDelegate.swift in Sources */,
 				83F8C980298554D8006EBD7C /* KeyItems.swift in Sources */,
 				83F8C98A2985A9DB006EBD7C /* SessionStore.swift in Sources */,
+				83DBAC022986DD6700534F55 /* LocalError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,9 +543,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B4AC212986CFA600A5A633 /* MovieListRemoteAPITest.swift in Sources */,
 				83F8C99729861496006EBD7C /* UserDataLayerTest.swift in Sources */,
 				83F8C94E29842E05006EBD7C /* UserSessionManagerTests.swift in Sources */,
+				83DBAC082986F27800534F55 /* NetworkMocker.swift in Sources */,
 				83F8C988298575A9006EBD7C /* UserSessionMockDataStack.swift in Sources */,
+				8373ED582986F6EE00F6E4A3 /* ClientMockImplementation.swift in Sources */,
 				83F8C98429856A19006EBD7C /* KeyStoreTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

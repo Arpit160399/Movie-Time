@@ -47,7 +47,7 @@ class KeyStore {
     
 }
 
-enum KeyStoreError: Error {
+enum KeyStoreError: LocalError {
     case Unknown
     case TypeMismatch
     
