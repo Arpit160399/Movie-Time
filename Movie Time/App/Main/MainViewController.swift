@@ -17,12 +17,24 @@ class MainViewController: UIViewController {
     // onBoarding Factory
     private let makeOnBoardingViewController: () -> OnBoardingViewController
     
+    // signed-in Factory
+    private let makeSignedInViewController: (Session) -> SignedInViewController
+    
+    private var viewState: MainViewState = .launch
+    
     // MARK: - Method
     init(sessionManager: SessionManager,
-         makeOnBoardingViewController: @escaping () -> OnBoardingViewController) {
+         sessionPublisher: AnyPublisher<Session,Never>,
+         makeOnBoardingViewController: @escaping () -> OnBoardingViewController,
+         makeSignedInViewController: @escaping  (Session) -> SignedInViewController) {
         self.sessionManager = sessionManager
         self.makeOnBoardingViewController = makeOnBoardingViewController
+        self.makeSignedInViewController = makeSignedInViewController
         super.init(nibName: nil, bundle: nil)
+        sessionPublisher
+        .sink { _ in } receiveValue: { session in
+            self.presentSignedInViewController(session)
+        }.store(in: &task)
     }
     
     required init?(coder: NSCoder) {
@@ -37,8 +49,11 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        launchView.startLoading {
-            self.getCurrentUserSession()
+        if viewState == .launch {
+            launchView
+                .startLoading {
+                    self.getCurrentUserSession()
+                }
         }
     }
     
@@ -57,10 +72,26 @@ class MainViewController: UIViewController {
     }
     
     
-    fileprivate func presentNextFlowWith(session: Session?) {
+    fileprivate func presentOnBoardingViewController() {
+        viewState = .onBoarding
         let onBoardingViewController = makeOnBoardingViewController()
         onBoardingViewController.modalPresentationStyle = .fullScreen
         self.present(onBoardingViewController, animated: true)
+    }
+    
+    fileprivate func presentSignedInViewController(_ session: Session) {
+        viewState = .signedIn
+        let signedInViewController = makeSignedInViewController(session)
+        signedInViewController.modalPresentationStyle = .fullScreen
+        self.present(signedInViewController, animated: true)
+    }
+    
+    fileprivate func presentNextFlowWith(session: Session?) {
+        if let session = session {
+            presentSignedInViewController(session)
+        } else {
+            presentOnBoardingViewController()
+        }
     }
     
 }

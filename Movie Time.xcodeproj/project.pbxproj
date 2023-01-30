@@ -14,6 +14,15 @@
 		83381BF729875A15006AA815 /* ErrorPresnterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381BF629875A15006AA815 /* ErrorPresnterHelper.swift */; };
 		83381BFA29875DF7006AA815 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381BF929875DF7006AA815 /* OnBoardingViewController.swift */; };
 		83381BFC2987D8BC006AA815 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381BFB2987D8BC006AA815 /* FontHelper.swift */; };
+		83381BFE2987E37A006AA815 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381BFD2987E37A006AA815 /* OnBoardingView.swift */; };
+		83381C002987E3CF006AA815 /* UIInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381BFF2987E3CF006AA815 /* UIInputTextField.swift */; };
+		83381C0229882233006AA815 /* ActiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C0129882233006AA815 /* ActiveButton.swift */; };
+		83381C04298867D1006AA815 /* OnBoardField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C03298867D1006AA815 /* OnBoardField.swift */; };
+		83381C06298867EC006AA815 /* OnBoardValuePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C05298867EC006AA815 /* OnBoardValuePublisher.swift */; };
+		83381C0829886831006AA815 /* OnBoardingCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C0729886831006AA815 /* OnBoardingCase.swift */; };
+		83381C0C298876CF006AA815 /* SignedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C0B298876CF006AA815 /* SignedInViewController.swift */; };
+		83381C0E2988894E006AA815 /* MainViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C0D2988894E006AA815 /* MainViewState.swift */; };
+		83381C1129888A32006AA815 /* ComicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C1029888A32006AA815 /* ComicCard.swift */; };
 		8373ED582986F6EE00F6E4A3 /* ClientMockImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373ED572986F6EE00F6E4A3 /* ClientMockImplementation.swift */; };
 		8373ED5D2987168600F6E4A3 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373ED5C2987168600F6E4A3 /* LaunchView.swift */; };
 		8373ED5F298717B700F6E4A3 /* ConstraintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373ED5E298717B700F6E4A3 /* ConstraintHelper.swift */; };
@@ -83,6 +92,15 @@
 		83381BF629875A15006AA815 /* ErrorPresnterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresnterHelper.swift; sourceTree = "<group>"; };
 		83381BF929875DF7006AA815 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		83381BFB2987D8BC006AA815 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		83381BFD2987E37A006AA815 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		83381BFF2987E3CF006AA815 /* UIInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInputTextField.swift; sourceTree = "<group>"; };
+		83381C0129882233006AA815 /* ActiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveButton.swift; sourceTree = "<group>"; };
+		83381C03298867D1006AA815 /* OnBoardField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardField.swift; sourceTree = "<group>"; };
+		83381C05298867EC006AA815 /* OnBoardValuePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardValuePublisher.swift; sourceTree = "<group>"; };
+		83381C0729886831006AA815 /* OnBoardingCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCase.swift; sourceTree = "<group>"; };
+		83381C0B298876CF006AA815 /* SignedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInViewController.swift; sourceTree = "<group>"; };
+		83381C0D2988894E006AA815 /* MainViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewState.swift; sourceTree = "<group>"; };
+		83381C1029888A32006AA815 /* ComicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicCard.swift; sourceTree = "<group>"; };
 		8373ED572986F6EE00F6E4A3 /* ClientMockImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMockImplementation.swift; sourceTree = "<group>"; };
 		8373ED592986FAA600F6E4A3 /* FakeOMDBErrro.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FakeOMDBErrro.json; sourceTree = "<group>"; };
 		8373ED5A2986FAA900F6E4A3 /* FakeOMDBResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FakeOMDBResponse.json; sourceTree = "<group>"; };
@@ -161,7 +179,8 @@
 		83381BF32987585A006AA815 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				83381BF829875DBA006AA815 /* onBoarding */,
+				83381C0A298876A3006AA815 /* SignedIn */,
+				83381BF829875DBA006AA815 /* OnBoarding */,
 				83381BF5298758A9006AA815 /* Main */,
 				83381BF429875895006AA815 /* Helper */,
 			);
@@ -174,6 +193,9 @@
 				83381BFB2987D8BC006AA815 /* FontHelper.swift */,
 				8373ED5E298717B700F6E4A3 /* ConstraintHelper.swift */,
 				83381BF629875A15006AA815 /* ErrorPresnterHelper.swift */,
+				83381C0129882233006AA815 /* ActiveButton.swift */,
+				83381BFF2987E3CF006AA815 /* UIInputTextField.swift */,
+				83381C1029888A32006AA815 /* ComicCard.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -181,18 +203,47 @@
 		83381BF5298758A9006AA815 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				8373ED5C2987168600F6E4A3 /* LaunchView.swift */,
+				83381C0F29888958006AA815 /* View */,
 				83F8C96629842EEA006EBD7C /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		83381BF829875DBA006AA815 /* onBoarding */ = {
+		83381BF829875DBA006AA815 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
+				83381C0929886843006AA815 /* view */,
 				83381BF929875DF7006AA815 /* OnBoardingViewController.swift */,
 			);
-			path = onBoarding;
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		83381C0929886843006AA815 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				83381C05298867EC006AA815 /* OnBoardValuePublisher.swift */,
+				83381C03298867D1006AA815 /* OnBoardField.swift */,
+				83381C0729886831006AA815 /* OnBoardingCase.swift */,
+				83381BFD2987E37A006AA815 /* OnBoardingView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		83381C0A298876A3006AA815 /* SignedIn */ = {
+			isa = PBXGroup;
+			children = (
+				83381C0B298876CF006AA815 /* SignedInViewController.swift */,
+			);
+			path = SignedIn;
+			sourceTree = "<group>";
+		};
+		83381C0F29888958006AA815 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83381C0D2988894E006AA815 /* MainViewState.swift */,
+				8373ED5C2987168600F6E4A3 /* LaunchView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8373ED562986F6D500F6E4A3 /* Mocker */ = {
@@ -571,10 +622,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B4AC1A2986C74A00A5A633 /* OMDBRemoteClientAPI.swift in Sources */,
+				83381C0E2988894E006AA815 /* MainViewState.swift in Sources */,
 				83F8C9A92986ADF5006EBD7C /* Networking.swift in Sources */,
 				83F8C970298489D5006EBD7C /* UserAuth.swift in Sources */,
 				83F8C9A229867E31006EBD7C /* Register.swift in Sources */,
+				83381C06298867EC006AA815 /* OnBoardValuePublisher.swift in Sources */,
+				83381C002987E3CF006AA815 /* UIInputTextField.swift in Sources */,
 				83F8C9752984C1EB006EBD7C /* UserDataEncoding.swift in Sources */,
+				83381C04298867D1006AA815 /* OnBoardField.swift in Sources */,
 				83B4AC152986B57600A5A633 /* OMDBRequestBuilder.swift in Sources */,
 				83F8C98229856983006EBD7C /* KeyItemData.swift in Sources */,
 				83F8C99529860537006EBD7C /* StringResource .swift in Sources */,
@@ -589,21 +644,26 @@
 				83F8C9A52986AA39006EBD7C /* MovieListRemoteAPI.swift in Sources */,
 				83F8C97E298554C4006EBD7C /* KeyQuery.swift in Sources */,
 				83381BFA29875DF7006AA815 /* OnBoardingViewController.swift in Sources */,
+				83381C0829886831006AA815 /* OnBoardingCase.swift in Sources */,
 				83381BF729875A15006AA815 /* ErrorPresnterHelper.swift in Sources */,
 				8373ED5D2987168600F6E4A3 /* LaunchView.swift in Sources */,
 				83B4AC182986C21300A5A633 /* OMDBError.swift in Sources */,
 				8337722B298724DB0092E1C0 /* ImageResource.swift in Sources */,
 				83381BF2298747BE006AA815 /* ColorResource.swift in Sources */,
+				83381C0229882233006AA815 /* ActiveButton.swift in Sources */,
 				83F8C98E2985AB1A006EBD7C /* UserDataLayer.swift in Sources */,
+				83381C1129888A32006AA815 /* ComicCard.swift in Sources */,
 				83F8C93729842E02006EBD7C /* AppDelegate.swift in Sources */,
 				83B4AC132986B20200A5A633 /* NetworkLayer.swift in Sources */,
 				83F8C96E298488F2006EBD7C /* SessionManager.swift in Sources */,
 				8373ED5F298717B700F6E4A3 /* ConstraintHelper.swift in Sources */,
+				83381BFE2987E37A006AA815 /* OnBoardingView.swift in Sources */,
 				83F8C9A029867E07006EBD7C /* User.swift in Sources */,
 				83F8C93929842E02006EBD7C /* SceneDelegate.swift in Sources */,
 				83F8C980298554D8006EBD7C /* KeyItems.swift in Sources */,
 				83F8C98A2985A9DB006EBD7C /* SessionStore.swift in Sources */,
 				83DBAC022986DD6700534F55 /* LocalError.swift in Sources */,
+				83381C0C298876CF006AA815 /* SignedInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

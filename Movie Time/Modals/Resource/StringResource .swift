@@ -23,6 +23,19 @@ public enum StringResource {
     
     static var errorTitle: String { "Error Occurred" }
     
+    static var signInButton: String { "Sign In" }
+    
+    static var signUpButton: String { "Sign Up" }
+    
+    static var signUpTitle: String { "Come on join the club" }
+    
+    static var signInTitle: String { "Hi there long time no see !" }
+    
+    static var navigationToSignIn: String { "Are you already in the Club ?" }
+    
+    static var navigationToSignUp: String { "Are you new here ?" }
+    
     static var alreadyUserExistError: String { "user with provided info already exist in the system." }
+    static var passwordValidationError: String {  "Please create an password with at-least greater than 6 character " }
     static var appTitle : String { "Movie Time" }
 }

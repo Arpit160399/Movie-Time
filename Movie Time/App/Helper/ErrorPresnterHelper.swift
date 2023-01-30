@@ -18,6 +18,14 @@ extension UIViewController {
         return alert
     }
     
+    func presentErrorWith(message: String)  {
+        let alert = UIAlertController(title: StringResource.errorTitle,
+                                      message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
     func present(error: Error)  {
         let alert = createAlert(error)
         let okAction = UIAlertAction(title: "Ok", style: .default)

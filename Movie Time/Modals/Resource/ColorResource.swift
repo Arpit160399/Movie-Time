@@ -12,7 +12,8 @@ public enum ColorResource {
     
     static var backgroundColor: UIColor { getColor(name: "background") }
     static var appYellow: UIColor { getColor(name: "AppYellow") }
-    static var textBlack: UIColor { getColor(name: "default") }
+    static var appBlack: UIColor { getColor(name: "default") }
+    static var appWhite: UIColor { getColor(name: "appWhite") }
     static var primaryColor: UIColor { getColor(name: "ActiveColor") }
     static var secondaryColor: UIColor { getColor(name: "Secondary") }
     static var bodyTextColor: UIColor { getColor(name: "TextColorLevel2") }

@@ -32,7 +32,7 @@ class LaunchView: UIView {
     private let title: UILabel = {
         let label = UILabel()
         label.font = .appFontStyle(.title)
-        label.textColor = ColorResource.textBlack
+        label.textColor = ColorResource.appBlack
         label.text = StringResource.appTitle
         label.adjustsFontForContentSizeCategory = true
         return label
