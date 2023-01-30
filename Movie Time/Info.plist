@@ -2,19 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>API Key</key>
+	<string>cf617522</string>
+	<key>Host Name</key>
+	<string>www.omdbapi.com</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>Host Name</key>
-	<string>www.omdbapi.com</string>
-	<key>API Key</key>
-	<string>cf617522</string>
-	<key>NSFaceIDUsageDescription</key>
-	<string>This is required to insure better user data secuirty and seamless login </string>
-	<key>salt</key>
-	<string>rip4vV8bGgqqmQwg_CoyXFpj+(onUNQhVP7ND</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -32,5 +28,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>salt</key>
+	<string>rip4vV8bGgqqmQwg_CoyXFpj+(onUNQhVP7ND</string>
 </dict>
 </plist>

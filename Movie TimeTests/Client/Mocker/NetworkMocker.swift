@@ -54,9 +54,7 @@ final class NetworkMocker: URLSession {
     }
     return dataTask
   }
-    fileprivate func handleCustomResponse() {
-
-    }
+ 
 }
 
 extension NetworkMocker {

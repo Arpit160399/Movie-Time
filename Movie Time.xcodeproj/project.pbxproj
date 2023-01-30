@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8337722B298724DB0092E1C0 /* ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8337722A298724DB0092E1C0 /* ImageResource.swift */; };
+		8337722D298725630092E1C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8337722C298725630092E1C0 /* Images.xcassets */; };
+		8337722F2987257A0092E1C0 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8337722E2987257A0092E1C0 /* Color.xcassets */; };
+		83381BF2298747BE006AA815 /* ColorResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381BF1298747BE006AA815 /* ColorResource.swift */; };
+		83381BF729875A15006AA815 /* ErrorPresnterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381BF629875A15006AA815 /* ErrorPresnterHelper.swift */; };
+		83381BFA29875DF7006AA815 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381BF929875DF7006AA815 /* OnBoardingViewController.swift */; };
+		83381BFC2987D8BC006AA815 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381BFB2987D8BC006AA815 /* FontHelper.swift */; };
 		8373ED582986F6EE00F6E4A3 /* ClientMockImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373ED572986F6EE00F6E4A3 /* ClientMockImplementation.swift */; };
+		8373ED5D2987168600F6E4A3 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373ED5C2987168600F6E4A3 /* LaunchView.swift */; };
+		8373ED5F298717B700F6E4A3 /* ConstraintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373ED5E298717B700F6E4A3 /* ConstraintHelper.swift */; };
 		83B4AC132986B20200A5A633 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B4AC122986B20200A5A633 /* NetworkLayer.swift */; };
 		83B4AC152986B57600A5A633 /* OMDBRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B4AC142986B57600A5A633 /* OMDBRequestBuilder.swift */; };
 		83B4AC182986C21300A5A633 /* OMDBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B4AC172986C21300A5A633 /* OMDBError.swift */; };
@@ -67,9 +76,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8337722A298724DB0092E1C0 /* ImageResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResource.swift; sourceTree = "<group>"; };
+		8337722C298725630092E1C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8337722E2987257A0092E1C0 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		83381BF1298747BE006AA815 /* ColorResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorResource.swift; sourceTree = "<group>"; };
+		83381BF629875A15006AA815 /* ErrorPresnterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresnterHelper.swift; sourceTree = "<group>"; };
+		83381BF929875DF7006AA815 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		83381BFB2987D8BC006AA815 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		8373ED572986F6EE00F6E4A3 /* ClientMockImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMockImplementation.swift; sourceTree = "<group>"; };
 		8373ED592986FAA600F6E4A3 /* FakeOMDBErrro.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FakeOMDBErrro.json; sourceTree = "<group>"; };
 		8373ED5A2986FAA900F6E4A3 /* FakeOMDBResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FakeOMDBResponse.json; sourceTree = "<group>"; };
+		8373ED5C2987168600F6E4A3 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		8373ED5E298717B700F6E4A3 /* ConstraintHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintHelper.swift; sourceTree = "<group>"; };
 		83B4AC122986B20200A5A633 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		83B4AC142986B57600A5A633 /* OMDBRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBRequestBuilder.swift; sourceTree = "<group>"; };
 		83B4AC172986C21300A5A633 /* OMDBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBError.swift; sourceTree = "<group>"; };
@@ -140,6 +158,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83381BF32987585A006AA815 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				83381BF829875DBA006AA815 /* onBoarding */,
+				83381BF5298758A9006AA815 /* Main */,
+				83381BF429875895006AA815 /* Helper */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		83381BF429875895006AA815 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				83381BFB2987D8BC006AA815 /* FontHelper.swift */,
+				8373ED5E298717B700F6E4A3 /* ConstraintHelper.swift */,
+				83381BF629875A15006AA815 /* ErrorPresnterHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		83381BF5298758A9006AA815 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8373ED5C2987168600F6E4A3 /* LaunchView.swift */,
+				83F8C96629842EEA006EBD7C /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		83381BF829875DBA006AA815 /* onBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				83381BF929875DF7006AA815 /* OnBoardingViewController.swift */,
+			);
+			path = onBoarding;
+			sourceTree = "<group>";
+		};
 		8373ED562986F6D500F6E4A3 /* Mocker */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,11 +256,11 @@
 		83F8C93529842E02006EBD7C /* Movie Time */ = {
 			isa = PBXGroup;
 			children = (
+				83381BF32987585A006AA815 /* App */,
 				83F8C99C29867D54006EBD7C /* Modals */,
 				83F8C9A32986A9C9006EBD7C /* Client */,
 				83F8C96C298488A9006EBD7C /* UserSessionManager */,
 				83F8C96A29843624006EBD7C /* MainAppDepedencyContainer.swift */,
-				83F8C96629842EEA006EBD7C /* MainViewController.swift */,
 				83F8C93629842E02006EBD7C /* AppDelegate.swift */,
 				83F8C93829842E02006EBD7C /* SceneDelegate.swift */,
 				83F8C93F29842E05006EBD7C /* Assets.xcassets */,
@@ -325,8 +380,12 @@
 		83F8C99D29867DC8006EBD7C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				83381BF1298747BE006AA815 /* ColorResource.swift */,
+				8337722A298724DB0092E1C0 /* ImageResource.swift */,
 				83F8C99429860537006EBD7C /* StringResource .swift */,
 				83DBAC012986DD6700534F55 /* LocalError.swift */,
+				8337722C298725630092E1C0 /* Images.xcassets */,
+				8337722E2987257A0092E1C0 /* Color.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -482,6 +541,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				83F8C94029842E05006EBD7C /* Assets.xcassets in Resources */,
+				8337722D298725630092E1C0 /* Images.xcassets in Resources */,
+				8337722F2987257A0092E1C0 /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,16 +582,23 @@
 				83F8C96B29843624006EBD7C /* MainAppDepedencyContainer.swift in Sources */,
 				83F8C96729842EEA006EBD7C /* MainViewController.swift in Sources */,
 				83F8C9922985B199006EBD7C /* FileUserSessionStore.swift in Sources */,
+				83381BFC2987D8BC006AA815 /* FontHelper.swift in Sources */,
 				83F8C97C298554A6006EBD7C /* KeyStore.swift in Sources */,
 				83F8C97229849903006EBD7C /* Session.swift in Sources */,
 				83F8C9772984C300006EBD7C /* UserDataCoder.swift in Sources */,
 				83F8C9A52986AA39006EBD7C /* MovieListRemoteAPI.swift in Sources */,
 				83F8C97E298554C4006EBD7C /* KeyQuery.swift in Sources */,
+				83381BFA29875DF7006AA815 /* OnBoardingViewController.swift in Sources */,
+				83381BF729875A15006AA815 /* ErrorPresnterHelper.swift in Sources */,
+				8373ED5D2987168600F6E4A3 /* LaunchView.swift in Sources */,
 				83B4AC182986C21300A5A633 /* OMDBError.swift in Sources */,
+				8337722B298724DB0092E1C0 /* ImageResource.swift in Sources */,
+				83381BF2298747BE006AA815 /* ColorResource.swift in Sources */,
 				83F8C98E2985AB1A006EBD7C /* UserDataLayer.swift in Sources */,
 				83F8C93729842E02006EBD7C /* AppDelegate.swift in Sources */,
 				83B4AC132986B20200A5A633 /* NetworkLayer.swift in Sources */,
 				83F8C96E298488F2006EBD7C /* SessionManager.swift in Sources */,
+				8373ED5F298717B700F6E4A3 /* ConstraintHelper.swift in Sources */,
 				83F8C9A029867E07006EBD7C /* User.swift in Sources */,
 				83F8C93929842E02006EBD7C /* SceneDelegate.swift in Sources */,
 				83F8C980298554D8006EBD7C /* KeyItems.swift in Sources */,
@@ -702,10 +770,10 @@
 				DEVELOPMENT_TEAM = 2AA7VP743Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Movie Time/Info.plist";
-				INFOPLIST_KEY_NSFaceIDUsageDescription = " To ensure user data secuirty and fast authetication ";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "This is required to insure better user data secuirty and seamless login ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -730,10 +798,10 @@
 				DEVELOPMENT_TEAM = 2AA7VP743Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Movie Time/Info.plist";
-				INFOPLIST_KEY_NSFaceIDUsageDescription = " To ensure user data secuirty and fast authetication ";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "This is required to insure better user data secuirty and seamless login ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

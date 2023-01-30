@@ -61,12 +61,35 @@ class FileUserSessionStore: UserDataLayer {
         }
     }
     
+    fileprivate func checkForLimit(_ user: [String: User]) -> [String: User] {
+        var userInfo = user
+        let size = userInfo.count
+        if size > limit {
+            let result = userInfo
+                         .dropLast(size - limit)
+                         .reduce([String : User](), { prevRes,current in
+                             var newRes = prevRes
+                             newRes[current.key] = current.value
+                             return newRes
+                         })
+            
+            return result
+        } else {
+           return userInfo
+        }
+    }
+    
     func create(user: RegisterUser) -> AnyPublisher<UserSession, Error> {
         Future { promise in
             do {
-                var userInfos: [String: User] = try self.readData() ?? [String: User]()
+                var userInfos: [String: User] = try self.checkForLimit(self.readData() ?? [String: User]())
                 let userData = User(data: user, password: self.hash(data: user.password))
-                userInfos[userData.email] = userData
+                if userInfos[userData.email] != nil {
+                    promise(.failure(FileSessionStoreError.alreadyUserExist))
+                    return
+                } else {
+                    userInfos[userData.email] = userData
+                }
                 try self.save(data: userData)
                 promise(.success(.init(user: userData)))
             } catch {
@@ -103,6 +126,7 @@ fileprivate enum FileSessionStoreError: LocalError {
     case noUserFound
     case VerificationFailed
     case unknown
+    case alreadyUserExist
    
     var localizedDescription: String {
         switch self {
@@ -112,6 +136,8 @@ fileprivate enum FileSessionStoreError: LocalError {
             return StringResource.userValidationError
         case .noUserFound:
             return StringResource.noUserErrorMessage
+        case .alreadyUserExist:
+            return StringResource.alreadyUserExistError
         }
     }
 }

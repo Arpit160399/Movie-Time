@@ -21,4 +21,8 @@ public enum StringResource {
     
     static var sessionError: String { "user session has expired." }
     
+    static var errorTitle: String { "Error Occurred" }
+    
+    static var alreadyUserExistError: String { "user with provided info already exist in the system." }
+    static var appTitle : String { "Movie Time" }
 }

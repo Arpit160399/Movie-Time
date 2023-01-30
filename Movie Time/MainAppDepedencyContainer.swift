@@ -8,10 +8,25 @@
 import UIKit
 
 class MainAppDependencyContainer {
+    
+    private let sessionStore: SessionManager
 
+    init() {
+        self.sessionStore = SessionStore.sessionManagerFactory()
+    }
     
     public func makeMainViewController() -> MainViewController {
-        return MainViewController() 
+        let onBoardingViewControllerFactory = {
+            self.makeOnBoardingViewController()
+        }
+        return MainViewController(sessionManager: sessionStore,
+                makeOnBoardingViewController: onBoardingViewControllerFactory)
+    }
+    
+    
+    // OnBoard user
+    public func makeOnBoardingViewController() -> OnBoardingViewController {
+        return OnBoardingViewController()
     }
 
 }
