@@ -8,9 +8,7 @@ Asynchronous tasks and event listening are performed using the Combine framework
 
 ## Screenshots
 
-<img src="Screenshots/Home.gif"  width="170" height="330"> 
-<img src="Screenshots/Login.gif"  width="170" height="330"> 
-<img src="Screenshots/IMG_8722.PNG"  width="170" height="330"> <img src="Screenshots/IMG_8723.PNG"  width="170" height="330"> <img src="Screenshots/IMG_8724.PNG"  width="170" height="330"> <img src="Screenshots/IMG_8721 2.PNG"  width="170" height="330">
+<img src="Screenshots/Home.gif"  width="170" height="330"> <img src="Screenshots/Login.gif"  width="170" height="330"> <img src="Screenshots/IMG_8722.PNG"  width="170" height="330"> <img src="Screenshots/IMG_8723.PNG"  width="170" height="330"> <img src="Screenshots/IMG_8724.PNG"  width="170" height="330"> <img src="Screenshots/IMG_8721 2.PNG"  width="170" height="330">
 
 ## Packages Used
 
