@@ -21,6 +21,7 @@ import UIKit
      static var phoneNumber: UIImage { UIImage(systemName: "phone.fill") ?? UIImage() }
      static var signInBannerImage: UIImage { getImage(name: "SignInBannerImage") }
      static var signUpBannerImage: UIImage { getImage(name: "SignUpBannerImage") }
+     static var logoutIcon: UIImage { UIImage(systemName: "person.crop.circle.fill.badge.minus") ?? UIImage() }
 }
 
 extension ImageResource {

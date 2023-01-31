@@ -33,11 +33,11 @@ extension UIViewController {
         present(alert, animated: true)
     }
     
-    func present<T: Subject<Void,Never>>(error: Error,_ event: T)  {
+    func present(error: Error,_ completion: @escaping () -> Void)  {
         let alert = createAlert(error)
         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
             self.dismiss(animated: true) {
-                event.send()
+                completion() 
             }
         }
         alert.addAction(okAction)

@@ -64,7 +64,9 @@ class MainViewController: UIViewController {
         .receive(on: DispatchQueue.main)
         .sink { complete in
             if case .failure(let error) = complete {
-                self.present(error: error)
+                self.present(error: error) {
+                    self.presentOnBoardingViewController()
+                }
            }
         } receiveValue: { session in
             self.presentNextFlowWith(session: session)
@@ -80,7 +82,7 @@ class MainViewController: UIViewController {
     }
     
     fileprivate func presentSignedInViewController(_ session: Session) {
-        viewState = .signedIn
+        viewState = .launch
         let signedInViewController = makeSignedInViewController(session)
         signedInViewController.modalPresentationStyle = .fullScreen
         self.present(signedInViewController, animated: true)

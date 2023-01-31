@@ -12,19 +12,29 @@ class ActiveButton: UIButton {
     private let comicCard = ComicCard()
     private let activityIndicator = UIActivityIndicatorView(style: .large)
     
+    public var cornerRadius: CGFloat = 5 {
+        didSet {
+            comicCard.radius = cornerRadius
+        }
+    }
+    public var activeColor: UIColor = ColorResource.primaryColor {
+        didSet {
+            comicCard.contentView.backgroundColor = activeColor
+        }
+    }
+    
     private let label: UILabel = {
         let label = UILabel()
         label.font = .appFontStyle(.heading)
-        label.textColor = .white
+        label.textColor = ColorResource.appWhite
         label.adjustsFontForContentSizeCategory = true
-        label.textColor = .white
         label.text = "tmep"
         return label
     }()
     
     private let icon: UIImageView = {
         let image = UIImageView()
-        image.tintColor = .white
+        image.tintColor = ColorResource.appWhite
         image.contentMode = .scaleAspectFit
         image.image?.applyingSymbolConfiguration(.init(scale: .large))
         return image
@@ -35,7 +45,7 @@ class ActiveButton: UIButton {
         super.init(frame: frame)
         comicCard.radius = 5
         comicCard.pinToParent(view: self)
-        comicCard.contentView.backgroundColor = ColorResource.primaryColor
+        comicCard.contentView.backgroundColor = activeColor
         comicCard.isUserInteractionEnabled = false
         setupView()
         setupIcon()
@@ -101,23 +111,3 @@ class ActiveButton: UIButton {
     
 }
 
-
-import SwiftUI
-struct ViewRepresentable: UIViewRepresentable {
-    
-    func makeUIView(context: Context) -> some UIView {
-        return ActiveButton()
-    }
-    
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-        
-    }
-}
-
-struct ViewController_Preview: PreviewProvider {
-    static var previews: some View {
-        ViewRepresentable()
-            .frame(width: 350)
-            .frame(height: 50)
-    }
-}

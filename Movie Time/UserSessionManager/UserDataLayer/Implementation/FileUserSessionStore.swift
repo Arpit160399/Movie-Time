@@ -23,9 +23,15 @@ class FileUserSessionStore: UserDataLayer {
         if let url = url {
             documentPath = url
         } else {
-            var url = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
-            url.append(path: name)
-            documentPath = url
+            do {
+                var url = try FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+                url.append(path: name)
+                documentPath = url
+            } catch {
+                var url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+                url.append(path: name)
+                documentPath = url
+            }
         }
     }
     
@@ -54,18 +60,19 @@ class FileUserSessionStore: UserDataLayer {
     private func save<T: Encodable>(data: T) throws  {
         let encoder = JSONEncoder()
         let jsonData = try encoder.encode(data)
-        if  FileManager.default.fileExists(atPath: documentPath.absoluteString) {
+        if  FileManager.default.fileExists(atPath: documentPath.relativePath) {
             try jsonData.write(to: documentPath)
         } else {
-            FileManager.default.createFile(atPath: documentPath.absoluteString, contents: jsonData)
+            if !FileManager.default.createFile(atPath: documentPath.relativePath, contents: jsonData) {
+                throw FileSessionStoreError.failedToSave
+            }
         }
     }
     
-    fileprivate func checkForLimit(_ user: [String: User]) -> [String: User] {
-        var userInfo = user
-        let size = userInfo.count
+    fileprivate func checkForLimit(_ users: [String: User]) -> [String: User] {
+        let size = users.count
         if size > limit {
-            let result = userInfo
+            let result = users
                          .dropLast(size - limit)
                          .reduce([String : User](), { prevRes,current in
                              var newRes = prevRes
@@ -75,14 +82,14 @@ class FileUserSessionStore: UserDataLayer {
             
             return result
         } else {
-           return userInfo
+           return users
         }
     }
     
     func create(user: RegisterUser) -> AnyPublisher<UserSession, Error> {
         Future { promise in
             do {
-                var userInfos: [String: User] = try self.checkForLimit(self.readData() ?? [String: User]())
+                var userInfos: [String:User] = try self.checkForLimit(self.readData() ?? [String: User]())
                 let userData = User(data: user, password: self.hash(data: user.password))
                 if userInfos[userData.email] != nil {
                     promise(.failure(FileSessionStoreError.alreadyUserExist))
@@ -90,7 +97,7 @@ class FileUserSessionStore: UserDataLayer {
                 } else {
                     userInfos[userData.email] = userData
                 }
-                try self.save(data: userData)
+                try self.save(data: userInfos)
                 promise(.success(.init(user: userData)))
             } catch {
                 promise(.failure(error))
@@ -102,7 +109,7 @@ class FileUserSessionStore: UserDataLayer {
         Future {  promise in
             do {
                 let password = self.hash(data: user.password)
-                let userInfos: [String: User] = try self.readData() ?? [String: User]()
+                let userInfos: [String: User] = try self.readData() ?? [String :User]()
                 if let userInfo = userInfos[user.userEmail]  {
                     guard password == userInfo.password else {
                         promise(.failure(FileSessionStoreError.VerificationFailed))
@@ -127,6 +134,7 @@ fileprivate enum FileSessionStoreError: LocalError {
     case VerificationFailed
     case unknown
     case alreadyUserExist
+    case failedToSave
    
     var localizedDescription: String {
         switch self {
@@ -138,6 +146,8 @@ fileprivate enum FileSessionStoreError: LocalError {
             return StringResource.noUserErrorMessage
         case .alreadyUserExist:
             return StringResource.alreadyUserExistError
+        case .failedToSave:
+            return StringResource.failToSave
         }
     }
 }

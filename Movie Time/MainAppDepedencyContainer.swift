@@ -17,6 +17,10 @@ class MainAppDependencyContainer {
         self.sessionStore = SessionStore.sessionManagerFactory()
     }
     
+    deinit {
+        subject.send(completion: .finished)
+    }
+    
     public func makeMainViewController() -> MainViewController {
     
         let onBoardingViewControllerFactory = {
@@ -43,6 +47,7 @@ class MainAppDependencyContainer {
     public func makeSignedInViewController(_ session: Session) -> SignedInViewController {
         let omdbClient = OMDBRemoteClientAPI()
         let signedInViewController = SignedInViewController(session: session.user,
+                                                sessionManager: sessionStore,
                                                 movieRemoteApi: omdbClient)
         return signedInViewController
     }

@@ -71,7 +71,6 @@ class OnBoardingViewController: UIViewController {
             self.onBoarding.processComplete()
             self.dismiss(animated: true) {
                 self.sessionStateSubject.send(session)
-                self.sessionStateSubject.send(completion: .finished)
             }
         }.store(in: &task)
     }
@@ -92,7 +91,6 @@ class OnBoardingViewController: UIViewController {
             self.onBoarding.processComplete()
             self.dismiss(animated: true) {
                 self.sessionStateSubject.send(session)
-                self.sessionStateSubject.send(completion: .finished)
             }
         }.store(in: &task)
     }

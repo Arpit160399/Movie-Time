@@ -88,8 +88,10 @@ class LaunchView: UIView {
         addPopCornImage()
         addMovieClapper()
         addTitleSection()
-        clapperBoard.transform = CGAffineTransform(scaleX: 0, y: 0)
-        popCornImage.transform = CGAffineTransform(scaleX: 0, y: 0)
+        let rest = CGAffineTransform(rotationAngle: 0)
+        let size = CGAffineTransform(scaleX: 0, y: 0)
+        self.popCornImage.transform = CGAffineTransform(scaleX: 0, y: 0)
+        self.clapperBoard.transform = size.concatenating(rest)
     }
     
     required init?(coder: NSCoder) {
@@ -116,31 +118,19 @@ extension LaunchView {
     
     func startLoading(completion: @escaping () -> Void) {
         let duration = 1.7
-        
-        let animation = configAnimation(duration: duration)
-    
-        popCornImage.layer.add(animation, forKey: "transform")
-        clapperBoard.layer.add(animation, forKey: "transform")
-        
-        CATransaction.begin()
-        
-        CATransaction.setCompletionBlock { [weak self] in
-            
-            guard let self = self else {
-                return
-            }
-            
+        UIView.animate(withDuration: duration, delay: 0.2 , usingSpringWithDamping: 0.6,
+                       initialSpringVelocity: 0.2) {
             let grow = CGAffineTransform(scaleX: 1, y: 1)
-            let rotate = CGAffineTransform(rotationAngle: .pi / 2 * -0.2)
-            self.clapperBoard.transform = grow.concatenating(rotate)
-            self.popCornImage.transform = CGAffineTransform(scaleX: 1, y: 1)
-
-        }
-        
-        CATransaction.commit()
-        DispatchQueue.main.asyncAfter(deadline: .now() + duration, execute: {
+               let rotate = CGAffineTransform(rotationAngle: .pi / 2 * -0.2)
+               self.clapperBoard.transform = grow.concatenating(rotate)
+               self.popCornImage.transform = CGAffineTransform(scaleX: 1, y: 1)
+        } completion: { _ in
             completion()
-        })
+            let rest = CGAffineTransform(rotationAngle: 0)
+            let size = CGAffineTransform(scaleX: 0, y: 0)
+            self.popCornImage.transform = CGAffineTransform(scaleX: 0, y: 0)
+            self.clapperBoard.transform = size.concatenating(rest)
+        }
     }
 }
 

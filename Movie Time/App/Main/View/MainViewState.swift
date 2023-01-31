@@ -8,6 +8,5 @@
 import Foundation
 enum MainViewState {
     case launch
-    case signedIn
     case onBoarding
 }

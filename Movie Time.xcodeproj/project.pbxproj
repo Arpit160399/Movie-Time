@@ -23,6 +23,14 @@
 		83381C0C298876CF006AA815 /* SignedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C0B298876CF006AA815 /* SignedInViewController.swift */; };
 		83381C0E2988894E006AA815 /* MainViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C0D2988894E006AA815 /* MainViewState.swift */; };
 		83381C1129888A32006AA815 /* ComicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C1029888A32006AA815 /* ComicCard.swift */; };
+		83381C1329888B11006AA815 /* SignedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C1229888B11006AA815 /* SignedInView.swift */; };
+		83381C1529888B41006AA815 /* MovieCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C1429888B41006AA815 /* MovieCardTableViewCell.swift */; };
+		83381C182988A997006AA815 /* SignedInViewRequestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C172988A997006AA815 /* SignedInViewRequestState.swift */; };
+		83381C1A2988B19F006AA815 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C192988B19F006AA815 /* HeaderView.swift */; };
+		83381C1C2988B56B006AA815 /* SignedInDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C1B2988B56B006AA815 /* SignedInDataSource.swift */; };
+		83381C1F2988C2BF006AA815 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 83381C1E2988C2BF006AA815 /* Nuke */; };
+		83381C2129893759006AA815 /* PosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C2029893759006AA815 /* PosterView.swift */; };
+		83381C2329893786006AA815 /* TageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83381C2229893786006AA815 /* TageView.swift */; };
 		8373ED582986F6EE00F6E4A3 /* ClientMockImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373ED572986F6EE00F6E4A3 /* ClientMockImplementation.swift */; };
 		8373ED5D2987168600F6E4A3 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373ED5C2987168600F6E4A3 /* LaunchView.swift */; };
 		8373ED5F298717B700F6E4A3 /* ConstraintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373ED5E298717B700F6E4A3 /* ConstraintHelper.swift */; };
@@ -101,6 +109,13 @@
 		83381C0B298876CF006AA815 /* SignedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInViewController.swift; sourceTree = "<group>"; };
 		83381C0D2988894E006AA815 /* MainViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewState.swift; sourceTree = "<group>"; };
 		83381C1029888A32006AA815 /* ComicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicCard.swift; sourceTree = "<group>"; };
+		83381C1229888B11006AA815 /* SignedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInView.swift; sourceTree = "<group>"; };
+		83381C1429888B41006AA815 /* MovieCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCardTableViewCell.swift; sourceTree = "<group>"; };
+		83381C172988A997006AA815 /* SignedInViewRequestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInViewRequestState.swift; sourceTree = "<group>"; };
+		83381C192988B19F006AA815 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		83381C1B2988B56B006AA815 /* SignedInDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInDataSource.swift; sourceTree = "<group>"; };
+		83381C2029893759006AA815 /* PosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterView.swift; sourceTree = "<group>"; };
+		83381C2229893786006AA815 /* TageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TageView.swift; sourceTree = "<group>"; };
 		8373ED572986F6EE00F6E4A3 /* ClientMockImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMockImplementation.swift; sourceTree = "<group>"; };
 		8373ED592986FAA600F6E4A3 /* FakeOMDBErrro.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FakeOMDBErrro.json; sourceTree = "<group>"; };
 		8373ED5A2986FAA900F6E4A3 /* FakeOMDBResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FakeOMDBResponse.json; sourceTree = "<group>"; };
@@ -156,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83381C1F2988C2BF006AA815 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +248,7 @@
 		83381C0A298876A3006AA815 /* SignedIn */ = {
 			isa = PBXGroup;
 			children = (
+				83381C162988A874006AA815 /* view */,
 				83381C0B298876CF006AA815 /* SignedInViewController.swift */,
 			);
 			path = SignedIn;
@@ -244,6 +261,20 @@
 				8373ED5C2987168600F6E4A3 /* LaunchView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		83381C162988A874006AA815 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				83381C172988A997006AA815 /* SignedInViewRequestState.swift */,
+				83381C1429888B41006AA815 /* MovieCardTableViewCell.swift */,
+				83381C1229888B11006AA815 /* SignedInView.swift */,
+				83381C192988B19F006AA815 /* HeaderView.swift */,
+				83381C1B2988B56B006AA815 /* SignedInDataSource.swift */,
+				83381C2029893759006AA815 /* PosterView.swift */,
+				83381C2229893786006AA815 /* TageView.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		8373ED562986F6D500F6E4A3 /* Mocker */ = {
@@ -503,6 +534,9 @@
 			dependencies = (
 			);
 			name = "Movie Time";
+			packageProductDependencies = (
+				83381C1E2988C2BF006AA815 /* Nuke */,
+			);
 			productName = "Movie Time";
 			productReference = 83F8C93329842E02006EBD7C /* Movie Time.app */;
 			productType = "com.apple.product-type.application";
@@ -575,6 +609,9 @@
 				Base,
 			);
 			mainGroup = 83F8C92A29842E02006EBD7C;
+			packageReferences = (
+				83381C1D2988C2BE006AA815 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = 83F8C93429842E02006EBD7C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -632,8 +669,10 @@
 				83381C04298867D1006AA815 /* OnBoardField.swift in Sources */,
 				83B4AC152986B57600A5A633 /* OMDBRequestBuilder.swift in Sources */,
 				83F8C98229856983006EBD7C /* KeyItemData.swift in Sources */,
+				83381C182988A997006AA815 /* SignedInViewRequestState.swift in Sources */,
 				83F8C99529860537006EBD7C /* StringResource .swift in Sources */,
 				83B4AC1C2986CC5800A5A633 /* OMDBResponse.swift in Sources */,
+				83381C1329888B11006AA815 /* SignedInView.swift in Sources */,
 				83F8C96B29843624006EBD7C /* MainAppDepedencyContainer.swift in Sources */,
 				83F8C96729842EEA006EBD7C /* MainViewController.swift in Sources */,
 				83F8C9922985B199006EBD7C /* FileUserSessionStore.swift in Sources */,
@@ -646,9 +685,13 @@
 				83381BFA29875DF7006AA815 /* OnBoardingViewController.swift in Sources */,
 				83381C0829886831006AA815 /* OnBoardingCase.swift in Sources */,
 				83381BF729875A15006AA815 /* ErrorPresnterHelper.swift in Sources */,
+				83381C1A2988B19F006AA815 /* HeaderView.swift in Sources */,
+				83381C1529888B41006AA815 /* MovieCardTableViewCell.swift in Sources */,
 				8373ED5D2987168600F6E4A3 /* LaunchView.swift in Sources */,
 				83B4AC182986C21300A5A633 /* OMDBError.swift in Sources */,
+				83381C1C2988B56B006AA815 /* SignedInDataSource.swift in Sources */,
 				8337722B298724DB0092E1C0 /* ImageResource.swift in Sources */,
+				83381C2129893759006AA815 /* PosterView.swift in Sources */,
 				83381BF2298747BE006AA815 /* ColorResource.swift in Sources */,
 				83381C0229882233006AA815 /* ActiveButton.swift in Sources */,
 				83F8C98E2985AB1A006EBD7C /* UserDataLayer.swift in Sources */,
@@ -664,6 +707,7 @@
 				83F8C98A2985A9DB006EBD7C /* SessionStore.swift in Sources */,
 				83DBAC022986DD6700534F55 /* LocalError.swift in Sources */,
 				83381C0C298876CF006AA815 /* SignedInViewController.swift in Sources */,
+				83381C2329893786006AA815 /* TageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,6 +1036,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		83381C1D2988C2BE006AA815 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		83381C1E2988C2BF006AA815 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83381C1D2988C2BE006AA815 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83F8C92B29842E02006EBD7C /* Project object */;
 }

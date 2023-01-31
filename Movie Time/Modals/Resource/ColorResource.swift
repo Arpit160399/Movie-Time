@@ -18,6 +18,7 @@ public enum ColorResource {
     static var secondaryColor: UIColor { getColor(name: "Secondary") }
     static var bodyTextColor: UIColor { getColor(name: "TextColorLevel2") }
     static var subHeadingTextColor: UIColor { getColor(name: "TextColorLevel2") }
+    static var highlight: UIColor { getColor(name: "Highlight")}
 }
 
 extension ColorResource {

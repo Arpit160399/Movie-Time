@@ -8,15 +8,15 @@
 import UIKit
 extension UIView {
     
-    func pinToParent(view: UIView) {
+    func pinToParent(view: UIView,padding: CGFloat = 0) {
         view.addSubview(self)
         self.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            self.topAnchor.constraint(equalTo: view.topAnchor),
-            self.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            self.leftAnchor.constraint(equalTo: view.leftAnchor),
-            self.rightAnchor.constraint(equalTo: view.rightAnchor)
+            self.topAnchor.constraint(equalTo: view.topAnchor,constant: padding),
+            self.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: -padding),
+            self.leftAnchor.constraint(equalTo: view.leftAnchor,constant: padding),
+            self.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -padding)
         ])
     }
     
