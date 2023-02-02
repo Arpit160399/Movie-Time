@@ -8,8 +8,22 @@
 import UIKit
 class SignedInDataSource: NSObject , UITableViewDataSource {
     
-    private var moviesList = [Movie]()
-    private let limit = 300
+    private var tableView: UITableView?
+    private var moviesList = [Movie](){
+        didSet {
+            tableView?.reloadData()
+        }
+    }
+    private let limit = 600
+    
+    convenience init(_ tableView: UITableView) {
+        self.init()
+        self.tableView = tableView
+        self.tableView?.dataSource = self
+        self.tableView?.separatorStyle = .none
+        self.tableView?.register(MovieCardTableViewCell.self,
+                                forCellReuseIdentifier: MovieCardTableViewCell.cellID)
+    }
     
     override init() {
         super.init()

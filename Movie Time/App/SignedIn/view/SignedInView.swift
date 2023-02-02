@@ -27,16 +27,13 @@ class SignedInView: UIView {
     private var tableViewBottom: NSLayoutConstraint?
     
     // table view datasource
-    private let datasource = SignedInDataSource()
+    private lazy var datasource = SignedInDataSource(tableview)
     
     fileprivate func tabelViewConfiguration() {
         tableview.backgroundColor = ColorResource.backgroundColor
         tableview.delegate = self
-        tableview.dataSource = datasource
-        tableview.separatorStyle = .none
         tableview.sectionHeaderHeight = 170
         tableview.contentInset = .init(top: 0, left: 0, bottom: loaderHeight + (2 * padding), right: 0)
-        tableview.register(MovieCardTableViewCell.self, forCellReuseIdentifier: MovieCardTableViewCell.cellID)
     }
     
     override init(frame: CGRect) {
@@ -54,8 +51,11 @@ class SignedInView: UIView {
     
     public func update( _ list: [Movie]) {
         datasource.updata(list)
-        size = datasource.getSize()
-        tableview.reloadData()
+        let newSize = datasource.getSize()
+        if size != newSize {
+            size = newSize
+            tableview.reloadData()
+        }
     }
     
     private func setupLogoutButton() {
@@ -111,7 +111,7 @@ class SignedInView: UIView {
     
     fileprivate func updateLayout() {
         loaderHeightConstraint?.isActive = true
-        UIView.animate(withDuration: 0.3, delay: 0, animations: { self.layoutIfNeeded() })
+        UIView.animate(withDuration: 0.2, delay: 0, animations: { self.layoutIfNeeded() })
     }
     
     @available(*, unavailable)

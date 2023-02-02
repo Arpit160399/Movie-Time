@@ -15,7 +15,7 @@ class OMDBRemoteClientAPI: MovieListRemoteAPI {
     }
     
     
-    func getMovieBy(word: String?, year: Int?, page: Int = 1) -> AnyPublisher<[Movie], Error> {
+    func getMovieBy(word: String?, year: Int?, page: Int = 1) -> AnyPublisher<MovieRes, Error> {
        
         // keeping under OMDB page limit
         let currentPage = min(max(page, 1),100)
@@ -37,8 +37,8 @@ class OMDBRemoteClientAPI: MovieListRemoteAPI {
         let request = OMDBRequestBuilder(queries: query)
         return networkSession
             .fetch(request: request, errorRes: OMDBError.self)
-            .map({ (res: OMDBResponse) -> [Movie] in
-                return res.search
+            .map({ (res: OMDBResponse) -> MovieRes in
+                return res
             })
             .eraseToAnyPublisher()
             .receive(on: DispatchQueue.main)

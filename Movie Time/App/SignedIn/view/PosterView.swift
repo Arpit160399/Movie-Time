@@ -27,7 +27,8 @@ class PosterView: UIView {
     
     func loadImage(from: URL?) {
         guard let url = from else { return }
-        Nuke.loadImage(with: url, into: imageView)
+        ImageLoadingOptions.shared.placeholder = ImageResource.clapperBoard
+        Nuke.loadImage(with: url,options: ImageLoadingOptions.shared, into: imageView)
     }
     
 }

@@ -22,6 +22,7 @@ class SignedInViewController: UIViewController {
     
     private var task = Set<AnyCancellable>()
     private var currentPage: Int = 1
+    private var currentContentSize: Int = 0
     private var year = 1990
     private var maxYearLimit = 2000
     
@@ -76,27 +77,30 @@ class SignedInViewController: UIViewController {
     // Get Movie List
     private func requestMovieList(_ page: Int) {
         signedInView.startLoading()
-        movieRemoteApi.getMovieBy(word: "love", year: year, page: currentPage)
+        movieRemoteApi.getMovieBy(word: "love",
+                                  year: year,
+                                  page: currentPage)
             .receive(on: DispatchQueue.main)
             .sink { [self] completion in
                 if case .failure(let error)  = completion {
-                    if case .responseWith(let res) = error as? NetworkLayer.NetworkError,
-                        !retry,
-                        res is OMDBError {
-                        self.year = min(year + 1, self.maxYearLimit)
-                        self.currentPage = 0
-                        self.requestMovieList(0)
-                        self.retry = true
-                    } else {
-                        self.present(error: error)
-                    }
+                    self.present(error: error)
                     self.signedInView.stopLoading()
                 }
             } receiveValue: { movies in
-                    self.signedInView.update(movies)
-                    self.signedInView.stopLoading()
-                    self.retry = false
+                self.checkContentSize(movies.search.count, movies.totalResults)
+                self.signedInView.update(movies.search)
+                self.signedInView.stopLoading()
             }.store(in: &task)
+    }
+    
+    private func checkContentSize(_ size: Int,_ contentSize: Int) {
+        currentContentSize += size
+        print(contentSize,currentContentSize)
+        if currentContentSize == contentSize {
+          year = min(year + 1,maxYearLimit)
+          currentPage = 0
+          currentContentSize = 0
+        }
     }
     
     // clear current user session

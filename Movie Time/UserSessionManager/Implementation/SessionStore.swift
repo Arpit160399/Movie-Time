@@ -40,7 +40,6 @@ class SessionStore: SessionManager {
     
     func getUserSession() -> AnyPublisher<Session?, Error> {
         Future { promise in
-            
             self.context.localizedReason = StringResource.biometricAuthMessage
 
                 do {

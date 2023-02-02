@@ -285,7 +285,7 @@ extension OnBoardingView: UITextFieldDelegate {
         var aRect: CGRect = frame
         aRect.size.height -= (keyboard.height)
         let activeTextFieldRect = tf.frame
-        let activeTextFieldOrigin = CGPoint(x: activeTextFieldRect.origin.x, y: activeTextFieldRect.origin.y + CGFloat(10))
+        let activeTextFieldOrigin = CGPoint(x: activeTextFieldRect.origin.x, y: activeTextFieldRect.origin.y + height)
         if !aRect.contains(activeTextFieldOrigin) {
             scrollView.scrollRectToVisible(activeTextFieldRect, animated: true)
         }

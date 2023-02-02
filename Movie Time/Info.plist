@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>pre</key>
-	<string></string>
 	<key>API Key</key>
 	<string>cf617522</string>
 	<key>Host Name</key>
@@ -30,8 +28,8 @@
 			</array>
 		</dict>
 	</dict>
-    <key>UIUserInterfaceStyle</key>
-    <string>Light</string>
+	<key>pre</key>
+	<string></string>
 	<key>salt</key>
 	<string>rip4vV8bGgqqmQwg_CoyXFpj+(onUNQhVP7ND</string>
 </dict>

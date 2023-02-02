@@ -35,6 +35,8 @@
 		8373ED582986F6EE00F6E4A3 /* ClientMockImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373ED572986F6EE00F6E4A3 /* ClientMockImplementation.swift */; };
 		8373ED5D2987168600F6E4A3 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373ED5C2987168600F6E4A3 /* LaunchView.swift */; };
 		8373ED5F298717B700F6E4A3 /* ConstraintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373ED5E298717B700F6E4A3 /* ConstraintHelper.swift */; };
+		83A6734B298BF58D0019F5B3 /* MovieRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6734A298BF58D0019F5B3 /* MovieRes.swift */; };
+		83A6734D298C337F0019F5B3 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6734C298C337F0019F5B3 /* Movie.swift */; };
 		83B4AC132986B20200A5A633 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B4AC122986B20200A5A633 /* NetworkLayer.swift */; };
 		83B4AC152986B57600A5A633 /* OMDBRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B4AC142986B57600A5A633 /* OMDBRequestBuilder.swift */; };
 		83B4AC182986C21300A5A633 /* OMDBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B4AC172986C21300A5A633 /* OMDBError.swift */; };
@@ -123,6 +125,8 @@
 		8373ED5A2986FAA900F6E4A3 /* FakeOMDBResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FakeOMDBResponse.json; sourceTree = "<group>"; };
 		8373ED5C2987168600F6E4A3 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		8373ED5E298717B700F6E4A3 /* ConstraintHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintHelper.swift; sourceTree = "<group>"; };
+		83A6734A298BF58D0019F5B3 /* MovieRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRes.swift; sourceTree = "<group>"; };
+		83A6734C298C337F0019F5B3 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		83B4AC122986B20200A5A633 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		83B4AC142986B57600A5A633 /* OMDBRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBRequestBuilder.swift; sourceTree = "<group>"; };
 		83B4AC172986C21300A5A633 /* OMDBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBError.swift; sourceTree = "<group>"; };
@@ -517,6 +521,8 @@
 			isa = PBXGroup;
 			children = (
 				83B4AC162986C1D900A5A633 /* OMDB */,
+				83A6734A298BF58D0019F5B3 /* MovieRes.swift */,
+				83A6734C298C337F0019F5B3 /* Movie.swift */,
 			);
 			path = ClientResponse;
 			sourceTree = "<group>";
@@ -683,6 +689,7 @@
 				83381BFC2987D8BC006AA815 /* FontHelper.swift in Sources */,
 				83F8C97C298554A6006EBD7C /* KeyStore.swift in Sources */,
 				83F8C97229849903006EBD7C /* Session.swift in Sources */,
+				83A6734D298C337F0019F5B3 /* Movie.swift in Sources */,
 				83F8C9772984C300006EBD7C /* UserDataCoder.swift in Sources */,
 				83F8C9A52986AA39006EBD7C /* MovieListRemoteAPI.swift in Sources */,
 				83F8C97E298554C4006EBD7C /* KeyQuery.swift in Sources */,
@@ -692,6 +699,7 @@
 				83381C1A2988B19F006AA815 /* HeaderView.swift in Sources */,
 				83381C1529888B41006AA815 /* MovieCardTableViewCell.swift in Sources */,
 				8373ED5D2987168600F6E4A3 /* LaunchView.swift in Sources */,
+				83A6734B298BF58D0019F5B3 /* MovieRes.swift in Sources */,
 				83B4AC182986C21300A5A633 /* OMDBError.swift in Sources */,
 				83381C1C2988B56B006AA815 /* SignedInDataSource.swift in Sources */,
 				8337722B298724DB0092E1C0 /* ImageResource.swift in Sources */,
@@ -881,7 +889,10 @@
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "This is required to insure better user data secuirty and seamless login ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -909,7 +920,10 @@
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "This is required to insure better user data secuirty and seamless login ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

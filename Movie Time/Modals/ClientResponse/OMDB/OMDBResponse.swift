@@ -6,9 +6,11 @@
 //
 
 import Foundation
-struct OMDBResponse: Decodable {
+struct OMDBResponse: MovieRes {
+  
     var search: [Movie]
     var totalResults: Int
+    var totalPage: Int { 0 }
     var response: Bool
     
     enum CodingKeys: String,CodingKey {
