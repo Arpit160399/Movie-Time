@@ -5,7 +5,7 @@
 //  Created by Arpit Singh on 28/01/23.
 //
 import Foundation
-class KeyStore {
+final class KeyStore {
     
     static func findItem(query: KeyQuery) throws -> Data? {
       var queryResult: AnyObject?

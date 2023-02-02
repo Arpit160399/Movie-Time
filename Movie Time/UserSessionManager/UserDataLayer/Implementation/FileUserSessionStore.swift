@@ -91,11 +91,12 @@ class FileUserSessionStore: UserDataLayer {
             do {
                 var userInfos: [String:User] = try self.checkForLimit(self.readData() ?? [String: User]())
                 let userData = User(data: user, password: self.hash(data: user.password))
-                if userInfos[userData.email] != nil {
+                let email = userData.email.lowercased()
+                if userInfos[email] != nil {
                     promise(.failure(FileSessionStoreError.alreadyUserExist))
                     return
                 } else {
-                    userInfos[userData.email] = userData
+                    userInfos[email] = userData
                 }
                 try self.save(data: userInfos)
                 promise(.success(.init(user: userData)))
@@ -110,7 +111,7 @@ class FileUserSessionStore: UserDataLayer {
             do {
                 let password = self.hash(data: user.password)
                 let userInfos: [String: User] = try self.readData() ?? [String :User]()
-                if let userInfo = userInfos[user.userEmail]  {
+                if let userInfo = userInfos[user.userEmail.lowercased()]  {
                     guard password == userInfo.password else {
                         promise(.failure(FileSessionStoreError.VerificationFailed))
                         return

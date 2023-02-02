@@ -41,7 +41,7 @@ public enum StringResource {
     static var passwordValidationError: String {  "Please create an password with at-least greater than 6 character " }
     static var appTitle : String { "Movie Time" }
     
-    static var signOutTitle: String { "SignOut" }
+    static var signOutTitle: String { "Sign Out" }
     
     static var logoutTitle: String { "Logout Current Session" }
     

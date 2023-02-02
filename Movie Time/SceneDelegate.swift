@@ -15,7 +15,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = contianer.makeMainViewController()
+   
+        if let value = ProcessInfo.processInfo.environment["-UITest"],
+           let screen = UITesting(rawValue: value) {
+            window?.rootViewController = screen.controller
+        } else {
+            window?.rootViewController = contianer.makeMainViewController()
+        }
         window?.makeKeyAndVisible()
     }
 

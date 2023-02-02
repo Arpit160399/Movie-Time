@@ -170,5 +170,5 @@ final class UserSessionManagerTest: XCTestCase {
         try testGetUserSessionWithoutSession()
         try testGetUserSessionWithSession()
     }
-
+    
 }
